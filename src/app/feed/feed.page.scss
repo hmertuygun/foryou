@@ -1,0 +1,32 @@
+.image {
+    height: 100px; 
+    width: 100px; 
+   border: 2px solid #fff;
+   border-radius: 50%;
+   box-shadow: 0 0 5px gray;
+   display: inline-block;
+   margin-left: auto;
+   margin-right: auto;
+}
+ion-content{
+
+  --ion-background-color:#e2e2e2
+}
+ion-toolbar{
+  --ion-background-color:#e2e2e2
+}
+
+.circle-pic{
+   width:120px;
+   height:120px;
+   -webkit-border-radius: 50%;
+   border-radius: 50%;
+}
+/* Custom Skeleton Line Height and Margin */
+.custom-skeleton ion-skeleton-text {
+    line-height: 13px;
+  }
+  
+  .custom-skeleton ion-skeleton-text:last-child {
+    margin-bottom: 5px;
+  }

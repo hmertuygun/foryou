@@ -1,0 +1,21 @@
+<ion-content>
+<h3>These are few questions to recommend betters foryou</h3>
+{{que}} <br>
+<ion-list  *ngFor="let type of ch">
+  <ion-button *ngIf = "type != 'age' && type != 'range'" (click)="go(i, type)" >{{ type }}</ion-button>
+  <div *ngIf = "type == 'age'">
+      <form  #form="ngForm" (ngSubmit)="age(form)">
+    <ion-input name="age" type="number" placeholder="Your Age" ngModel required></ion-input>
+    <ion-button class="butt" size="large" type="submit" [disabled]="form.invalid" expand="block">Save</ion-button>
+  </form>  
+  </div>
+  <div *ngIf = "type == 'range'">
+      <form  #form="ngForm" (ngSubmit)="range(form)">
+              <ion-range  [(ngModel)]="rangeValue" name="range" color="danger" pin="true"></ion-range>
+    <ion-button class="butt" size="large" type="submit" [disabled]="form.invalid" expand="block">Save</ion-button>
+  </form>  
+  </div>
+    
+</ion-list>
+
+</ion-content>

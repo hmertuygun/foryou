@@ -1,0 +1,33 @@
+<ion-content>
+    <form style="margin-top:16%"  #form="ngForm" (ngSubmit)="register(form)">
+      <ion-grid>
+        <ion-row justify-content-center>
+          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+            <div text-center>
+              <h1>ForYou</h1>
+              <h3>Create your account!</h3>
+            </div>
+            <div padding>
+              {{message}}
+              <ion-item>
+                <ion-input  name="name" type="text" placeholder="Name" ngModel required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input name="email" type="email" placeholder="your@email.com" ngModel required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input name="password" type="password" placeholder="Password" ngModel required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input name="confirm" type="password" placeholder="Password again" ngModel required></ion-input>
+              </ion-item>
+            </div>
+            <div padding>
+              <ion-button  size="large" type="submit" [disabled]="form.invalid" expand="block">Register</ion-button>
+            </div>
+            <div><ion-button [routerLink]="['/home']" expand="block">Back</ion-button></div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </ion-content>

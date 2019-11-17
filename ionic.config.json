@@ -1,5 +1,9 @@
 {
   "name": "storm",
-  "integrations": {},
-  "type": "angular"
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "67c3a77c"
 }
